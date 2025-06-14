@@ -1,7 +1,0 @@
-<Token id, 'Integro'> (Linha: 1, Coluna: 1)
-<Token id, 'num'> (Linha: 1, Coluna: 9)
-<Token ;, ';'> (Linha: 1, Coluna: 12)
-<Token digue, 'digue'> (Linha: 2, Coluna: 1)
-<Token id, 'Integro'> (Linha: 2, Coluna: 7)
-<Token id, 'constante'> (Linha: 2, Coluna: 15)
-<Token ;, ';'> (Linha: 2, Coluna: 24)
