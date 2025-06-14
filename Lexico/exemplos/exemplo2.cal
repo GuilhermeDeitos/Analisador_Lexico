@@ -1,0 +1,18 @@
+Integro num;
+Stringo op receba "s";
+Integro soma;
+Integro cont receba 1;
+
+duranto (op igual "s") {
+  calma("Digite um numero: ");
+  calabreso(num);
+  soma receba soma mais num;
+  calma("Deseja continuar? (s/n): ");
+  calabreso(op);
+  
+  ifo (op diferente "s") {
+    calma("A soma e: ",soma);
+    calma("A media e: ",soma dividido cont);
+  }
+  cont receba cont mais 1;
+}

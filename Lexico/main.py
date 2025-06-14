@@ -1,4 +1,4 @@
-from analisadorLexico import AnalisadorLexico
+from AnalisadorLexico.analisadorLexico import AnalisadorLexico
 import sys
 
 

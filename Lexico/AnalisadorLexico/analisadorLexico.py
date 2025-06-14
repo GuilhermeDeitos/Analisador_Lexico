@@ -1,5 +1,5 @@
-from especificacao_tokens import especificacao_tokens
-from Token import Token
+from AnalisadorLexico.especificacao_tokens import especificacao_tokens
+from AnalisadorLexico.Token import Token
 
 class AnalisadorLexico:
     def __init__(self, arquivo):
@@ -46,18 +46,22 @@ class AnalisadorLexico:
       
     # Retorna os tokens para um arquivo txt
     def write_tokens(self, arquivo_saida):
-        with open(arquivo_saida, 'w') as file:
-            token_count = 0
-            while True:
-                token = self.get_token()
-                print(f"Token obtido: {token}")
-                print(f"Posição atual: Linha {self.linha_atual}, Caractere {self.caractere_atual}")
-                if token is None:
-                    print("Token None encontrado - encerrando processamento")
-                    break
-                file.write(f"{token}\n")
-                token_count += 1
-            print(f"Total de tokens processados: {token_count}")
+      arquivo_saida = arquivo_saida if arquivo_saida.endswith('.txt') else arquivo_saida + '.txt'
+      # O arquivo de saida deve ficar no diretorio tokens
+      if not arquivo_saida.startswith('tokens/'):
+          arquivo_saida = 'tokens/' + arquivo_saida
+      with open(arquivo_saida, 'w') as file:
+          token_count = 0
+          while True:
+              token = self.get_token()
+              #print(f"Token obtido: {token}")
+              #print(f"Posição atual: Linha {self.linha_atual}, Caractere {self.caractere_atual}")
+              if token is None:
+                  #print("Token None encontrado - encerrando processamento")
+                  break
+              file.write(f"{token}\n")
+              token_count += 1
+          print(f"Total de tokens processados: {token_count}")
             
     def get_token(self):
       if self.linha_atual >= len(self.linhas):

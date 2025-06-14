@@ -12,12 +12,6 @@ Comentário
 */
 
 soma receba a mais b;
-//COmentario
-vezes
-7
--
-93
-+
-/aux
+// Inserir erro
 
-digue 59 receba +
+soma = 2 + 5 //Erro pois não existem os tokens = e +
