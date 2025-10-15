@@ -1,0 +1,32 @@
+/*
+Algoritmo de BubbleSort em CalabresoScript
+*/
+Integro i;
+Integro j;
+Integro temp;
+Integro n receba 5;
+Integro vetor[5];
+
+// Entrada dos elementos
+calma("Digite 5 numeros:");
+paro (i igual 0; i menor_que n; i mais mais) {
+  calabreso(vetor[i]);
+}
+
+// Algoritmo Bubble Sort
+paro (i igual 0; i menor_que n menos 1; i mais mais) {
+  paro (j igual 0; j menor_que n menos i menos 1; j mais mais) {
+    ifo (vetor[j] maior_que vetor[j mais 1]) {
+      // Troca os elementos
+      temp receba vetor[j];
+      vetor[j] receba vetor[j mais 1];
+      vetor[j mais 1] receba temp;
+    }
+  }
+}
+
+// Exibe vetor ordenado
+calma("Vetor ordenado:");
+paro (i igual 0; i menor_que n; i mais mais) {
+  calma(vetor[i]);
+}

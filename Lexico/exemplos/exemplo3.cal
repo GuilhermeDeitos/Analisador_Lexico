@@ -1,7 +1,7 @@
-integro num;
+integro 6num;
 digue integro constante;
 
-stringo nome;
+stringo nome32;
 digue stringo constante;
 
 realo pi;

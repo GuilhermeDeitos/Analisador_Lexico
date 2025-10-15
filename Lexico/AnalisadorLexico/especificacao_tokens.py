@@ -10,7 +10,7 @@ especificacao_tokens = {
         ';': r';',
         ',': r',',
         'receba': r'=',
-        'op_logicos': r'\b(?:e|ou|nem)\b',
+        'op_logicos': ['e','ou','nem'],
         'op_aritmeticos_soma': ['incremente', 'decremente','mais', 'menos'],
         'op_aritmeticos_multiplicacao': ['multiplique', 'divida'],
         'op_relacionais': ['maior_que', 'menor_que', 'maior_ingual',

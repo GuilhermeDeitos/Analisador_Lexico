@@ -13,7 +13,7 @@ class AnalisadorLexico:
           'digue','integro','stringo','realo','incremente','decremente','receba','mais',
           'menos','multiplique','divida','maior_que',
           'menor_que','ingual','variegado','maior_ingual','menor_ingual',
-          'e','ou','nem','ifo''elso','elso ifo','paro','duranto','calma','calabreso'
+          'e','ou','nem','ifo','elso','elso ifo','paro','duranto','calma','calabreso'
         ]
         self.carregar_arquivo()
 
@@ -33,13 +33,10 @@ class AnalisadorLexico:
         if self.caractere_atual >= self.caracteres_por_linha[self.linha_atual]:
             return False
         return True
-      
     # Capturar tokens de vários caracteres
-    def __capturar_token(self,tipo, condicao, validacao=None):
+    def __capturar_token(self,tipo, condicao):
         inicio = self.caractere_atual
         while self.__verifica_linha() and condicao(self.caracteres[self.linha_atual][self.caractere_atual]):
-          if validacao and not validacao(self.caracteres[self.linha_atual][self.caractere_atual]):
-            break
           self.caractere_atual += 1
         valor = ''.join(self.caracteres[self.linha_atual][inicio:self.caractere_atual])
         return Token(tipo, valor, self.linha_atual + 1, inicio + 1)
