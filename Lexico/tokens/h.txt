@@ -1,0 +1,4 @@
+<Token DIGUE, 'digue'> (Linha: 1, Coluna: 1)
+<Token REALO_TIPO, 'realo'> (Linha: 1, Coluna: 7)
+<Token ID, 't'> (Linha: 1, Coluna: 13)
+<Token SEMICOLON, ';'> (Linha: 1, Coluna: 14)

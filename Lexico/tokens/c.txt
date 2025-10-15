@@ -1,0 +1,5 @@
+<Token calma, 'calma'> (Linha: 1, Coluna: 1)
+<Token op_logicos, '('> (Linha: 1, Coluna: 6)
+<Token stringo, 'calabreso'> (Linha: 1, Coluna: 7)
+<Token op_logicos, ')'> (Linha: 1, Coluna: 18)
+<Token ;, ';'> (Linha: 1, Coluna: 19)
