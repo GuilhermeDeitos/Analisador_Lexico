@@ -1,3 +1,5 @@
+integro num receba 10;
+
 ifo (num menor_que 10) {
   calma("menor que 10");
 } elso ifo (num maior_qu 10) {

@@ -14,4 +14,4 @@ Comentário
 soma receba a mais b;
 // Inserir erro
 
-soma = 2 + 5 //Erro pois não existem os tokens = e +
+soma = 2 + 5 Erro pois não existem os tokens = e +

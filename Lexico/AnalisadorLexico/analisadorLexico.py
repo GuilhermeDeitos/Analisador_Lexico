@@ -37,15 +37,6 @@ class AnalisadorLexico:
             'calma': 'CALMA',
             'calabreso': 'CALABRESO'
         }
-        self.operadores_simbolicos = {
-            '+': 'OP_MAIS',
-            '-': 'OP_MENOS',
-            '*': 'OP_MULTIPLIQUE',
-            '/': 'OP_DIVIDA',
-            '=': 'OP_ATRIBUICAO',
-            '>': 'OP_MAIOR_QUE',
-            '<': 'OP_MENOR_QUE'
-        }
         self.delimitadores = {
             '(': 'LPAREN',
             ')': 'RPAREN',
@@ -54,9 +45,6 @@ class AnalisadorLexico:
             ';': 'SEMICOLON',
             ',': 'COMMA'
         }
-        self.carregar_arquivo()
-
-    def carregar_arquivo(self):
         if not self.arquivo.endswith('.cal'):
             raise ValueError("O arquivo deve ter a extensão .cal")
         with open(self.arquivo, 'r', encoding='utf-8') as file:
@@ -211,30 +199,7 @@ class AnalisadorLexico:
             inicio = self.caractere_atual
             self.caractere_atual += 1
             return Token(self.delimitadores[caractere_atual], caractere_atual, self.linha_atual + 1, inicio + 1)
-        
-        # Operadores simbólicos
-        if caractere_atual in self.operadores_simbolicos:
-            inicio = self.caractere_atual
-            # Verifica operadores de dois caracteres (>=, <=, ==, !=)
-            if self.caractere_atual + 1 < self.caracteres_por_linha[self.linha_atual]:
-                proximo = self.caracteres[self.linha_atual][self.caractere_atual + 1]
-                if caractere_atual == '>' and proximo == '=':
-                    self.caractere_atual += 2
-                    return Token('OP_MAIOR_IGUAL', '>=', self.linha_atual + 1, inicio + 1)
-                elif caractere_atual == '<' and proximo == '=':
-                    self.caractere_atual += 2
-                    return Token('OP_MENOR_IGUAL', '<=', self.linha_atual + 1, inicio + 1)
-                elif caractere_atual == '=' and proximo == '=':
-                    self.caractere_atual += 2
-                    return Token('OP_IGUAL', '==', self.linha_atual + 1, inicio + 1)
-                elif caractere_atual == '!' and proximo == '=':
-                    self.caractere_atual += 2
-                    return Token('OP_VARIEGADO', '!=', self.linha_atual + 1, inicio + 1)
-            
-            # Operador de um caractere
-            self.caractere_atual += 1
-            return Token(self.operadores_simbolicos[caractere_atual], caractere_atual, self.linha_atual + 1, inicio + 1)
-        
+
         # Caractere não reconhecido
         inicio = self.caractere_atual
         self.caractere_atual += 1
