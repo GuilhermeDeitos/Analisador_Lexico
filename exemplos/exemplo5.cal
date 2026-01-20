@@ -1,0 +1,13 @@
+realo a;
+realo b;
+
+a receba 3;
+b receba 5;
+
+ifo(a maior_que b){
+    calma("a maior");
+}elso_ifo(b maior_que a){
+    b receba a multiplique 2;
+}elso{
+    a receba b multiplique 2;   
+}

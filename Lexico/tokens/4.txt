@@ -1,0 +1,4 @@
+<Token INTEGRO_TIPO, 'integro'> (Linha: 1, Coluna: 1)
+<Token INTEGRO, '2'> (Linha: 1, Coluna: 9)
+<Token ID, 'bn'> (Linha: 1, Coluna: 10)
+<Token SEMICOLON, ';'> (Linha: 1, Coluna: 12)

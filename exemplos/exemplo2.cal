@@ -1,0 +1,5 @@
+integro contador receba 0;
+
+duranto (contador 10
+    contador incremente;
+}
